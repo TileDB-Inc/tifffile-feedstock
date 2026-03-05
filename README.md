@@ -17,8 +17,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/TileDB-Inc/feedstock-builds/_build/latest?definitionId=None&branchName=main">
-        <img src="https://dev.azure.com/TileDB-Inc/feedstock-builds/_apis/build/status/tifffile-feedstock?branchName=main">
+      <a href="https://dev.azure.com/TileDB-Inc/CI/_build/latest?definitionId=57&branchName=main">
+        <img src="https://dev.azure.com/TileDB-Inc/CI/_apis/build/status/tifffile-feedstock?branchName=main">
       </a>
     </td>
   </tr>
