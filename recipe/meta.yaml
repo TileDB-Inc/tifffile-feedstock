@@ -1,0 +1,56 @@
+{% set name = "tifffile" %}
+{% set version = "2023.8.12" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 824956b6d974b9d346aae59932bea862a2ad18fcc2b1a820b6941b7f6ddb2bca
+
+build:
+  number: 0
+  noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-build-isolation --no-deps
+  entry_points:
+    - tifffile = tifffile:main
+    - tiffcomment = tifffile.tiffcomment:main
+    - tiff2fsspec = tifffile.tiff2fsspec:main
+    - lsm2bin = tifffile.lsm2bin:main
+
+requirements:
+  host:
+    - python >=3.9
+    - pip
+  run:
+    - python >=3.9
+    - numpy >=1.19.2
+    - imagecodecs >=2023.7.10
+  run_constrained:
+    - matplotlib-base >=3.3
+
+test:
+  imports:
+    - tifffile
+  commands:
+    - pip check
+    - tifffile --help
+    - tiffcomment --help
+    - tiff2fsspec --help
+  requires:
+    - pip
+
+about:
+  home: https://github.com/cgohlke/tifffile, https://github.com/conda-forge/tifffile-feedstock
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: Read and write image data from and to TIFF files.
+  description: Fork of conda-forge feedstock
+
+extra:
+  recipe-maintainers:
+    - ihnorton
+    - jdblischak
+    - jp-dark
