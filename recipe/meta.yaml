@@ -44,20 +44,20 @@ test:
     - python 3.9
     - brotli 1.0
     - bzip2 1
-    - c_blosc2 2.12
-    - c_compiler_version 14
-    - cxx_compiler_version 14
+    - c-blosc2 2.12
+    - gcc 14
+    - gxx 14
     - giflib 5.2
     - lcms2 2
     - lerc 4
     - libaec 1
     - libavif 0.11
     - libdeflate 1.17
-    - libjpeg_turbo 2
+    - libjpeg-turbo 2
     - libpng 1.6
     - libtiff 4.5
     - libwebp 1
-    - lz4_c 1.9
+    - lz4-c 1.9
     - numpy 1.26
     - openjpeg 2
     - snappy 1.1
