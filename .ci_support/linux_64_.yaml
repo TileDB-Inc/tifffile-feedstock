@@ -1,6 +1,6 @@
 channel_sources:
-- conda-forge
+- conda-forge,tiledb
 channel_targets:
-- conda-forge main
+- tiledb main
 docker_image:
 - quay.io/condaforge/linux-anvil-x86_64:alma9
